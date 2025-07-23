@@ -65,5 +65,3 @@ You can install the necessary libraries using `pip`:
 
 ```bash
 pip install -r requirements.txt
-
-
