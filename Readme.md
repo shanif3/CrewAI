@@ -53,7 +53,7 @@ Bonus:
 5. **Any other interesting idea**
 
 Please start by implementing the first 2 missions, and then proceed with the bonus missions as you see fit.
-
+I encourage you to visit CrewAI for more information on the architecture- https://docs.crewai.com/en/learn/overview.
 ## Requirements
 
 To run this project, make sure you have the following dependencies installed:
@@ -65,4 +65,5 @@ You can install the necessary libraries using `pip`:
 
 ```bash
 pip install -r requirements.txt
+
 
