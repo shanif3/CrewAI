@@ -58,31 +58,3 @@ class CustomAgents:
             reasoning=True,  # Enable strategic planning,
         )
 
-    #
-    # # Agent 3: Relationship Discovery
-    # def relationship_agent(self):
-    #     return Agent(
-    #     role="Inter-Paper Relationship Mapper",
-    #     goal="Discover and map relationships between all analyzed papers",
-    #     backstory="""You are a research analyst who excels at finding connections,
-    #     similarities, differences, and relationships between academic works to understand
-    #     how they relate to each other.""",
-    #     tools=[similarity_analysis_tool, citation_mapper_tool, clustering_tool],
-    #     verbose=True,
-    #     llm=self.OPENAIGPT35
-    #     )
-    #
-    #
-    # # Agent 4: Summary Generation
-    # def summary_agent(self):
-    #     return Agent(
-    #     role="Comprehensive Summary Generator",
-    #     goal="Generate a detailed summary of all analyzed papers and their inter-relationships",
-    #     backstory="""You are an expert summarizer who can condense complex academic
-    #     information into clear, concise, and informative summaries that capture the essence
-    #     of the research.""",
-    #     tools=[summary_tool, relationship_summary_tool],
-    #     verbose=True,
-    #     llm=self.OPENAIGPT4
-    #     )
-    #
