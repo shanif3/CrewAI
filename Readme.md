@@ -1,4 +1,4 @@
-# Related Work based CrewAI
+# Related Work based CrewAI 
 
 This project is designed to automatically process PDF papers, extract relevant metadata, abstract, key findings, and
 reference lists, and generate a structured profile for each paper. It leverages an agent-based architecture to interact
@@ -17,6 +17,23 @@ information from academic papers, such as:
 By processing these PDFs and storing the extracted data in a structured format (e.g., JSON), researchers can quickly
 build a comprehensive literature review that highlights important papers, trends, and citations in their field of study.
 
+## Project Structure
+```bash
+├── .env # YOU NEED TO CREATE THIS FILE
+├── Data
+│   └── paper1.pdf
+├── Readme.md
+├── agents.py
+├── main.py
+├── requirements.txt
+└── tasks.py
+```
+Please note that you need to **create** a `.env` file in the root directory of the project. This file should contain the OPENAI_API_KEY, like this:
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+
 ## Features
 
 - **Extracts paper metadata**: Extracts the title, authors, and publication year from PDF papers.
@@ -24,8 +41,6 @@ build a comprehensive literature review that highlights important papers, trends
 - **Extracts reference lists and citations**: Identifies and extracts reference lists and citations mentioned in the
   papers.
 - **Generates a structured JSON profile**: For each processed paper, a structured JSON profile is created.
-- **Supports easy integration with external PDF extraction tools**: Easily integrates with any external tool for PDF
-  processing.
 
 ## Missions to Complete
 
@@ -49,7 +64,7 @@ Bonus:
 
 4. **Find Common Citations and Recommend**: The system will analyze the citations within the reviewed papers and find
    common references that the user might not have initially provided. These papers will be recommended based on their
-   relevance to the user's area of focus.
+   relevance to the user's area of focus. ( Hint: This can be done using tools- ask me about it!)
 5. **Any other interesting idea**
 
 Please start by implementing the first 2 missions, and then proceed with the bonus missions as you see fit.    
@@ -58,10 +73,20 @@ I encourage you to visit CrewAI for more information on the architecture- https:
 
 To run this project, make sure you have the following dependencies installed:
 
-- Python 3.10 - 3.13
+- Python 3.12.11
+  - In order to run the code with Python 3.12.11, please do the following:
+  - If you are using a virtual environment, make sure to create it with Python 3.12.11:
+    ```bash
+    pyenv init 
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init - zsh)"
+    pyenv shell 3.12.11
+    ```
 - Required Python libraries can be found in the `requirements.txt` file.
 
-You can install the necessary libraries using `pip`:
-
-```bash
-pip install -r requirements.txt
+    You can install the necessary libraries using `pip`:
+    
+    ```bash
+    pip install -r requirements.txt
+    ```

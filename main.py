@@ -20,6 +20,7 @@ class RelatedWorkCrew:
 
         # Define the PDF path for each paper
         inputs_papers = ['paper1.pdf']
+        inputs= [{'paper_path': os.path.join('Data', pdf_path)} for pdf_path in inputs_papers]
         results = []
         for pdf_path in inputs_papers:
             pdf_path = os.path.join('Data', pdf_path)
@@ -38,7 +39,7 @@ class RelatedWorkCrew:
                 verbose=True,
             )
 
-            result = analysis_per_paper_crew.kickoff()
+            result = analysis_per_paper_crew.kickoff_for_each(inputs)
             results.append(result)
 
         return results
